@@ -5,9 +5,14 @@ var ReactDOM = require('react-dom');
 var TodoComponent = React.createClass({
     render: function(){
         return(
-            <h1>Hellooooo</h1>
+        		<div>
+        			<p>{this.props.testvar.price}</p>
+            </div>
         );
     }
 });
 
-ReactDOM.render(<TodoComponent />, document.getElementById('todo-wrapper'));
+var myVariable = {name: 'test', price: 4.5 * 3};
+
+ReactDOM.render(<TodoComponent mssg="hi there" testvar={myVariable}/>, document.getElementById('todo-wrapper'));
+
